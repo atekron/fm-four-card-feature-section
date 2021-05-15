@@ -104,7 +104,7 @@ header p {
   border-top: 0.4rem solid var(--blue);
 }
 
-@media screen and (min-width: 1080px) {
+@media screen and (min-width: 1440px) {
   .container {
     min-width: 1080px;
     max-width: 80vw;

@@ -53,6 +53,7 @@ header h2 {
 }
 
 header p {
+  max-width: 25rem;
   color: var(--grayish-blue);
   font-weight: 400;
   font-size: 1.2rem;
@@ -105,10 +106,12 @@ header p {
 
 @media screen and (min-width: 1080px) {
   .container {
-    background-color: aliceblue;
     min-width: 1080px;
     max-width: 80vw;
     max-height: 90vh;
+  }
+  header {
+    margin-bottom: 3rem;
   }
 
   header h1 {
@@ -129,5 +132,31 @@ header p {
     color: var(--grayish-blue);
     font-weight: 400;
     font-size: 1rem;
+  }
+
+  section {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    column-gap: 2rem;
+    grid-template-areas:
+      ". t ."
+      "s t c"
+      "s k c"
+      ". k .";
+  }
+  .supervisor {
+    grid-area: s;
+  }
+
+  .builder {
+    grid-area: t;
+  }
+
+  .karma {
+    grid-area: k;
+  }
+  .calculator {
+    grid-area: c;
   }
 }
